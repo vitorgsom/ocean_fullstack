@@ -2,7 +2,8 @@ const express = require("express");
 const { MongoClient, ObjectId } = require("mongodb");
 
 // localhost ou 127.0.0.1
-const DB_URL = "mongodb://127.0.0.1:27017"
+// const DB_URL = "mongodb://127.0.0.1:27017"
+const DB_URL = "mongodb+srv://admin:nZYsHnbJCPs45bdE@cluster0.6nxmsr6.mongodb.net/?retryWrites=true&w=majority"
 const DB_NAME = "ocean-fullstack"
 
 async function main() {
@@ -54,6 +55,23 @@ async function main() {
     res.send(item)
   })
 
+  // Endpoint Update -> [PUT] /item/:id
+  app.put("/item/:id", async (req, res) => {
+    const id = req.params.id
+    const body = req.body
+    await collection.updateOne(
+      { _id: new ObjectId(id) },
+      { $set: body }
+    )
+
+    res.send(body)
+  })
+
+  // Endpoint Delete  -> [DELETE] /item/:id
+  //Exercício:
+  // - pesuqisar sobre a operação de remover itens
+  // - implementar o endpoint de delete
+  // - realizar a operação de excluir item
 
   console.log('server running!')
   app.listen(3000);
