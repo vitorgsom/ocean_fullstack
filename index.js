@@ -73,6 +73,15 @@ async function main() {
   // - implementar o endpoint de delete
   // - realizar a operação de excluir item
 
+  app.delete("/item/:id", async (req, res) => {
+    const id = req.params.id
+
+    await collection.deleteOne({ _id: new ObjectId(id) })
+
+    res.send("Registro removido com sucesso!" + id)
+  })
+
+
   console.log('server running!')
   app.listen(3000);
 }
