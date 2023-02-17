@@ -1,3 +1,4 @@
+import ReadAll from '../components/ReadAll'
 import './App.css'
 
 function App() {
@@ -5,6 +6,8 @@ function App() {
 
   return (
     <div className="App">
+      Hello, world JSX!
+      <ReadAll/>
     </div>
   )
 }
