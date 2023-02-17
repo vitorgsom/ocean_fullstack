@@ -1,4 +1,4 @@
-import ReadAll from './components/ReadAll'
+import ReadAll from './components/ReadAll/ReadAll'
 import './App.css'
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       Hello, world JSX!
-      <ReadAll/>
+      {/* <ReadAll/> */}
     </div>
   )
 }
