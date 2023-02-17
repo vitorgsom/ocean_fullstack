@@ -1,15 +1,10 @@
-import ReadAll from './components/ReadAll/ReadAll'
+import { ReadAll } from './components/ReadAll/ReadAll'
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export function App() {
   return (
     <div className="App">
-      Hello, world JSX!
-      {/* <ReadAll/> */}
+      <ReadAll />
     </div>
   )
 }
-
-export default App

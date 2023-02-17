@@ -1,12 +1,11 @@
 import './Card.css'
 
-function Card() {
+export function Card(props) {
+    const item = props.item
     return (
         <div className="card">
-            <h1>Rick Sanchez</h1>
-            <img src="https://rickandmortyapi.com/api/character/avatar/1.jpeg" />
+            <h1>{item.nome}</h1>
+            <img src={item.imagemUrl} />
         </div>
     )
 }
-
-export default Card

@@ -1,13 +1,27 @@
 import './ReadAll.css'
-import Card from "../Card/Card"
+import {Card} from "../Card/Card"
 
-function ReadAll() {
+const items = [
+    {
+        _id: '1234',
+        nome: 'Rick Sanchez',
+        imagemUrl: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg'
+    },
+    {
+        _id: '5678',
+        nome: 'Morty Smith',
+        imagemUrl: 'https://rickandmortyapi.com/api/character/avatar/2.jpeg'
+    },
+];
+
+
+
+export function ReadAll() {
     return (
     <div className="ReadAll">
-        <Card/>
-        <Card/>
+        {items.map( (item) => {
+        return <Card key={'card' + item._id} item={item} />
+        })}
     </div>
     )
 }
-
-export default ReadAll
