@@ -1,4 +1,4 @@
-import ReadAll from '../components/ReadAll'
+import ReadAll from './components/ReadAll'
 import './App.css'
 
 function App() {
