@@ -1,5 +1,6 @@
 import { ReadAll } from './components/ReadAll/ReadAll'
 import './App.css'
+import Header from './components/Header/Header'
 
 /**
  * Desafios!
@@ -26,6 +27,7 @@ import './App.css'
 export function App() {
   return (
     <div className="App">
+      <Header />
       <ReadAll />
     </div>
   )
