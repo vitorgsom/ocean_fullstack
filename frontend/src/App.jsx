@@ -1,6 +1,7 @@
 import { ReadAll } from './components/ReadAll/ReadAll'
 import './App.css'
 import Header from './components/Header/Header'
+import ReadById from './components/ReadById/ReadById'
 
 /**
  * Desafios!
@@ -29,6 +30,7 @@ export function App() {
     <div className="App">
       <Header />
       <ReadAll />
+      <ReadById />
     </div>
   )
 }
