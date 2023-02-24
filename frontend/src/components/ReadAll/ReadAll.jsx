@@ -35,7 +35,8 @@ export function ReadAll() {
     const [items, setItems] = useState([])
 
     async function realizarRequisicao() {
-      const url = "http://localhost:3000/item"
+      // const url = "http://localhost:3000/item"
+      const url = "https://ocean-fullstack.onrender.com/item"
       const response = await fetch(url)
       const data = await response.json()
 
