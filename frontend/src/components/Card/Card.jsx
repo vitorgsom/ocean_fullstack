@@ -13,8 +13,6 @@ export function Card(props) {
                         return <div key={`tag-${index}`} className="tag">{tag}</div>
                     })
                 }
-                <div className="tag">Tag 1</div>
-                <div className="tag">Tag 2</div>
             </div>)}
 
             <img src={item.imagemUrl} />

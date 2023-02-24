@@ -1,7 +1,8 @@
 import './ReadAll.css'
 import {Card} from "../Card/Card"
+import { useEffect, useState } from 'react';
 
-const items = [
+const itemsMock = [
     {
       _id: "63ee1e0b18f2b9a93da8435a",
       nome: "Rick Sanchez",
@@ -30,9 +31,23 @@ const items = [
     },
   ];
 
-
-
 export function ReadAll() {
+    const [items, setItems] = useState([])
+
+    async function realizarRequisicao() {
+      const url = "http://localhost:3000/item"
+      const response = await fetch(url)
+      const data = await response.json()
+
+      console.log(data)
+
+      setItems(data)
+    }
+
+    useEffect(() => {realizarRequisicao()}, [])
+    
+    console.log(62, items)
+
     return (
     <div className="ReadAll">
         {items.map( (item) => {
